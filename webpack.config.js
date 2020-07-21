@@ -1,6 +1,15 @@
 module.exports = {
     entry: './app/app.ts',
     devtool: 'inline-source-map',
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node-modules/
+        }
+      ]
+    },
     /*which files to use for module resolution*/
     resolve: {
       extensions: [ '.tsx', '.ts', '.js' ]
