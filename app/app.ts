@@ -10,7 +10,7 @@ function startGame() {
     messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';
 }
 
-function logPlayer(name: string) {
+function logPlayer(name: string) : void {
     console.log(`New game starting for player: ${name}`);
 }
 
