@@ -1,16 +1,13 @@
 function startGame() {
     //starting a new game
 
-    let playerName: string = 'Audrey';
+    let playerName: string | undefined = getInputValue('playername');
     logPlayer(playerName);
 
-    
-    var messagesElement = document.getElementById('messages');
-    //this allows the message to appear on the screen
-    messagesElement!.innerText = 'Welcome to MultiMath! Starting new game...';
+    postScore(100, playerName);
 }
 
-function logPlayer(name: string) : void {
+function logPlayer(name: string = "MultiMath Player") : void {
     console.log(`New game starting for player: ${name}`);
 }
 
@@ -27,7 +24,7 @@ function getInputValue(elementID: string): string | undefined {
 }
 
 //posting scores to the screen
-function postScore(score: Number, playerName:string) : void {
+function postScore(score: Number, playerName?:string) : void {
     const scoreElement: HTMLElement | null = document.getElementById('postedScores');
     /*using non-null assertion operator to assert that the posted score element won't be null*/ 
     scoreElement!.innerText = `${score} - ${playerName}`; 

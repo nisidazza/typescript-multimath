@@ -1,11 +1,11 @@
 "use strict";
 function startGame() {
-    var playerName = 'Audrey';
+    var playerName = getInputValue('playername');
     logPlayer(playerName);
-    var messagesElement = document.getElementById('messages');
-    messagesElement.innerText = 'Welcome to MultiMath! Starting new game...';
+    postScore(100, playerName);
 }
 function logPlayer(name) {
+    if (name === void 0) { name = "MultiMath Player"; }
     console.log("New game starting for player: " + name);
 }
 function getInputValue(elementID) {
