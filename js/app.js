@@ -2,7 +2,7 @@
 function startGame() {
     var playerName = getInputValue('playername');
     logPlayer(playerName);
-    postScore(100, playerName);
+    postScore(80, playerName);
 }
 function logPlayer(name) {
     if (name === void 0) { name = "MultiMath Player"; }
@@ -18,6 +18,7 @@ function getInputValue(elementID) {
     }
 }
 function postScore(score, playerName) {
+    if (playerName === void 0) { playerName = 'MultiMath Player'; }
     var scoreElement = document.getElementById('postedScores');
     scoreElement.innerText = score + " - " + playerName;
 }

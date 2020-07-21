@@ -4,7 +4,7 @@ function startGame() {
     let playerName: string | undefined = getInputValue('playername');
     logPlayer(playerName);
 
-    postScore(100, playerName);
+    postScore(80, playerName);
 }
 
 function logPlayer(name: string = "MultiMath Player") : void {
@@ -24,7 +24,7 @@ function getInputValue(elementID: string): string | undefined {
 }
 
 //posting scores to the screen
-function postScore(score: Number, playerName?:string) : void {
+function postScore(score: Number, playerName:string = 'MultiMath Player') : void {
     const scoreElement: HTMLElement | null = document.getElementById('postedScores');
     /*using non-null assertion operator to assert that the posted score element won't be null*/ 
     scoreElement!.innerText = `${score} - ${playerName}`; 
