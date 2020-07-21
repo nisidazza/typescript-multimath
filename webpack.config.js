@@ -1,6 +1,7 @@
 module.exports = {
     entry: './app/app.ts',
     devtool: 'inline-source-map',
+    /*which files to use for module resolution*/
     resolve: {
       extensions: [ '.tsx', '.ts', '.js' ]
     },
@@ -8,6 +9,6 @@ module.exports = {
       filename: 'bundle.js'
     },
     devServer: {
-      inline: false
+      inline: false  /*prevents the browser to automatically refreshing when new bundles are produced - only for the purpose of this project */
     }
   };
