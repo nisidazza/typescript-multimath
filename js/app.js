@@ -8,5 +8,14 @@ function startGame() {
 function logPlayer(name) {
     console.log("New game starting for player: " + name);
 }
+function getInputValue(elementID) {
+    var inputElement = document.getElementById(elementID);
+    if (inputElement.value === "") {
+        return undefined;
+    }
+    else {
+        return inputElement.value;
+    }
+}
 document.getElementById('startGame').addEventListener('click', startGame);
 //# sourceMappingURL=app.js.map
