@@ -4,5 +4,4 @@ function startGame() {
     //this allows the message to appear on the screen
     messagesElement.innerText = 'Welcome to MultiMath! Starting new game...';
 }
-
 document.getElementById('startGame').addEventListener('click', startGame);
