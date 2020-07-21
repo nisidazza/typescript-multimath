@@ -17,5 +17,9 @@ function getInputValue(elementID) {
         return inputElement.value;
     }
 }
+function postScore(score, playerName) {
+    var scoreElement = document.getElementById('postedScores');
+    scoreElement.innerText = score + " - " + playerName;
+}
 document.getElementById('startGame').addEventListener('click', startGame);
 //# sourceMappingURL=app.js.map
