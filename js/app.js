@@ -23,4 +23,6 @@ function postScore(score, playerName) {
     scoreElement.innerText = score + " - " + playerName;
 }
 document.getElementById('startGame').addEventListener('click', startGame);
+var logMessage = function (message) { return console.log(message); };
+logMessage('Welcome to MultiMath!');
 //# sourceMappingURL=app.js.map
