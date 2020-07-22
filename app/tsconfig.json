@@ -5,10 +5,19 @@
         "module": "CommonJS",
         "moduleResolution": "node",
         "traceResolution": true,
-        "baseUrl" : "./modules"         /*specifies the base directory that should be used when attempting to resolve non-relative module imports*/
+        /*examples*/
+        // "baseUrl" : "./modules" ,        /*specifies the base directory that should be used when attempting to resolve non-relative module imports*/
+        // "paths": {
+        //     "my_lib": ["./customPath"]
+        // },
+        // "rootDirs": [
+        //     "modules",
+        //     "src",
+        //     "ts/modules"
+        // ]
     },
     // "include": [
-    //     "./**/*"                     /*patterns it should match*/
+    //     "./**/*"                     /*specifies patterns it should match*/
     // ]               
     "files": [
         "./app.ts"
