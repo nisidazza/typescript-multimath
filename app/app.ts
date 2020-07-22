@@ -55,4 +55,17 @@ function logError(err: string): void {
     console.log(err);
 }
 
+//implementing with object literal
+let myResult: Result = {
+    playerName: 'Marie',
+    score: 5,
+    problemCount: 5,
+    factor: 7
+};
+
+let player: Person = {
+    name: 'Daniel',
+    formatName: () => 'Dan'
+}
+    ;
 
