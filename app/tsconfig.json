@@ -1,12 +1,14 @@
 {
-    "extends": "../tsconfig.base", /*specifies which config file it extends*/
+    "extends": "../tsconfig.base",      /*specifies which config file it extends*/
     "compilerOptions": {
         "removeComments": true,
         "module": "CommonJS",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "traceResolution": true,
+        "baseUrl" : "./modules"         /*specifies the base directory that should be used when attempting to resolve non-relative module imports*/
     },
     // "include": [
-    //     "./**/*"                   /*patterns it should match*/
+    //     "./**/*"                     /*patterns it should match*/
     // ]               
     "files": [
         "./app.ts"
