@@ -27,7 +27,7 @@ var Scoreboard = (function () {
         for (var index = 0; index < this.results.length; index++) {
             var result = this.results[index];
             output += '<h4>';
-            output += result.playerName + ': ' + result.score + '/' + result.problemCount + 'for factor' + result.factor;
+            output += result.playerName + ': ' + result.score + '/' + result.problemCount + ' for factor ' + result.factor;
             output += '</h4>';
         }
         var scoresElement = document.getElementById('scores');
@@ -75,4 +75,16 @@ var Game = (function () {
     };
     return Game;
 }());
+var newGame;
+document.getElementById('startGame').addEventListener('click', function () {
+    var player = new Player();
+    player.name = Utility.getInputValue('playername');
+    var problemCount = Number(Utility.getInputValue('problemCount'));
+    var factor = Number(Utility.getInputValue('factor'));
+    newGame = new Game(player, problemCount, factor);
+    newGame.displayGame();
+});
+document.getElementById('calculate').addEventListener('click', function () {
+    newGame.calculateScore();
+});
 //# sourceMappingURL=app.js.map
