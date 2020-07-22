@@ -66,6 +66,5 @@ let myResult: Result = {
 let player: Person = {
     name: 'Daniel',
     formatName: () => 'Dan'
-}
-    ;
+};
 
