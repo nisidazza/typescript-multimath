@@ -2,7 +2,7 @@
     "extends": "../tsconfig.base" ,  /*specifies which config file it extends*/
     "compilerOptions": {
         "removeComments": true,
-        "outFile" : "../js/app.js"   /*same file that I am referencing in index.html*/
+        "module": "CommonJS"
     }  ,
     // "include": [
     //     "./**/*"                   /*patterns it should match*/
