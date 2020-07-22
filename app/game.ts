@@ -45,4 +45,34 @@ class Game {
         // enable the calculate score button
         document.getElementById('calculate')!.removeAttribute('disabled');
     }
+
+    //reads the answer provided by the player and create a result object that can be added to the scoreboard
+    calculateScore(): void {
+
+        let score: number = 0;
+
+        // loop through the text boxes and calculate the number that are correct
+        for (let i = 1; i <= this.problemCount; i++) {
+            const answer: number = Number(Utility.getInputValue('answer' + i));
+            //compares the provided answer to the correct answer
+            if (i * this.factor === answer) {
+                score++;
+            }
+        }
+
+        // create a new result object - that implements the Result interface - to pass to the scoreboard
+        const result: Result = {
+            playerName: this.player.name,
+            score: score,
+            problemCount: this.problemCount,
+            factor: this.factor
+        };
+
+        // add the result and update the scoreboard
+        this.scoreboard.addResult(result);
+        this.scoreboard.updateScoreboard();
+
+        // disable the calculate score button to get ready for the next game
+        document.getElementById('calculate')!.setAttribute('disabled', 'true');
+    }
 }
