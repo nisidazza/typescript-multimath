@@ -1,4 +1,3 @@
-"use strict";
 function startGame() {
     var playerName = getInputValue('playername');
     logPlayer(playerName);
@@ -37,4 +36,14 @@ logMessage('Welcome to MultiMath!');
 function logError(err) {
     console.log(err);
 }
+var myResult = {
+    playerName: 'Marie',
+    score: 5,
+    problemCount: 5,
+    factor: 7
+};
+var player = {
+    name: 'Daniel',
+    formatName: function () { return 'Dan'; }
+};
 //# sourceMappingURL=app.js.map
