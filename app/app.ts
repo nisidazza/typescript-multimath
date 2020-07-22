@@ -13,6 +13,7 @@ function logPlayer(name: string = "MultiMath Player"): void {
     console.log(`New game starting for player: ${name}`);
 }
 
+
 //posting scores to the screen
 function postScore(score: Number, playerName: string = 'MultiMath Player'): void {
 
