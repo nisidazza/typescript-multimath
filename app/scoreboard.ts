@@ -1,4 +1,5 @@
 import { Result } from './result';
+import * as _ from 'lodash';
 
 //display the scores on the screen
 export class Scoreboard {
@@ -9,6 +10,8 @@ export class Scoreboard {
     //adds new results
     addResult(newResult: Result): void {
         this.results.push(newResult);
+        let allCapsName: string = _.upperCase(newResult.playerName);
+        console.log(`${allCapsName}: ${newResult.score}`);
     }
 
     //generates all the HTML representing all the results and shows them on the screen
